@@ -6,10 +6,10 @@ local ruled   = require('ruled')
 ruled.notification.connect_signal('request::rules', function()
    -- All notifications will match this rule.
    ruled.notification.append_rule({
-      rule       = { },
+      rule       = nil,
       properties = {
          screen           = awful.screen.preferred,
-         implicit_timeout = 5,
+         implicit_timeout = 5
       }
    })
 end)

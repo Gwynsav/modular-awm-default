@@ -3,8 +3,8 @@ local beautiful = require('beautiful')
 
 --- Menu
 local menu = {}
-local hkey_popup = awful.hotkeys_popup
 local apps = require('config.apps')
+local hkey_popup = awful.hotkeys_popup
 
 -- Create a main menu.
 menu.awesome = {
@@ -15,9 +15,11 @@ menu.awesome = {
    { 'quit',        function() awesome.quit() end }
 }
 
-menu.main = awful.menu({ items = {
-   { 'awesome', menu.awesome, beautiful.awesome_icon },
-   { 'open terminal', apps.terminal }
-} })
+menu.main = awful.menu({
+   items = {
+      { 'awesome', menu.awesome, beautiful.awesome_icon },
+      { 'open terminal', apps.terminal }
+   }
+})
 
 return menu
