@@ -3,14 +3,15 @@ local awful = require('awful')
 local mod    = require('binds.mod')
 local modkey = mod.modkey
 
-local apps   = require('config.apps')
+local apps    = require('config.apps')
+local widgets = require('ui')
 
 --- Global key bindings
 awful.keyboard.append_global_keybindings({
-   -- General Awesome keys
+   -- General Awesome keys.
    awful.key({ modkey,           }, 's', require('awful.hotkeys_popup').show_help,
       { description = 'show help', group = 'awesome' }),
-   awful.key({ modkey,           }, 'w', function() require('ui.menu').main:show() end,
+   awful.key({ modkey,           }, 'w', function() widgets.menu.main:show() end,
       { description = 'show main menu', group = 'awesome' }),
    awful.key({ modkey, mod.ctrl  }, 'r', awesome.restart,
       { description = 'reload awesome', group = 'awesome' }),
@@ -29,7 +30,7 @@ awful.keyboard.append_global_keybindings({
    awful.key({ modkey            }, 'p', function() require('menubar').show() end,
       { description = 'show the menubar', group = 'launcher' }),
 
-   -- Tags related keybindings
+   -- Tags related keybindings.
    awful.key({ modkey,           }, 'Left', awful.tag.viewprev,
       { description = 'view previous', group = 'tag' }),
    awful.key({ modkey,           }, 'Right', awful.tag.viewnext,
@@ -37,7 +38,7 @@ awful.keyboard.append_global_keybindings({
    awful.key({ modkey,           }, 'Escape', awful.tag.history.restore,
       { description = 'go back', group = 'tag' }),
 
-   -- Focus related keybindings
+   -- Focus related keybindings.
    awful.key({ modkey,           }, 'j', function() awful.client.focus.byidx( 1) end,
       { description = 'focus next by index', group = 'client' }),
    awful.key({ modkey,           }, 'k', function() awful.client.focus.byidx(-1) end,
@@ -60,7 +61,7 @@ awful.keyboard.append_global_keybindings({
       end
       end, { description = 'restore minimized', group = 'client' }),
 
-   -- Layout related keybindings
+   -- Layout related keybindings.
    awful.key({ modkey, mod.shift }, 'j', function() awful.client.swap.byidx( 1) end,
       { description = 'swap with next client by index', group = 'client' }),
    awful.key({ modkey, mod.shift }, 'k', function() awful.client.swap.byidx(-1) end,

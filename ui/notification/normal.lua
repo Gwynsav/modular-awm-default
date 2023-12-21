@@ -14,6 +14,7 @@ ruled.notification.connect_signal('request::rules', function()
    })
 end)
 
+-- Defines the default notification layout.
 naughty.connect_signal('request::display', function(n)
    naughty.layout.box({ notification = n })
 end)

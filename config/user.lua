@@ -11,7 +11,8 @@ return {
    -- Each screen has its own tag table. You can just define one and append it to all 
    -- screens (default behavior).
    tags = { '1', '2', '3', '4', '5', '6', '7', '8', '9' },
-   -- Table of layouts to cover with awful.layout.inc, ORDER MATTERS.
+   -- Table of layouts to cover with awful.layout.inc, ORDER MATTERS, the first layout 
+   -- in the table is your DEFAULT LAYOUT.
    layouts = {
       awful.layout.suit.floating,
       awful.layout.suit.tile,

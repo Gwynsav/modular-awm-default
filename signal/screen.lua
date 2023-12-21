@@ -35,3 +35,6 @@ screen.connect_signal('request::wallpaper', function(s)
       }
    })
 end)
+-- An example of what's mentioned above. For more information, see:
+-- https://awesomewm.org/apidoc/utility_libraries/gears.wallpaper.html
+-- gears.wallpaper.maximized(beautiful.wallpaper)
