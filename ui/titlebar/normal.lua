@@ -13,7 +13,8 @@ return function(c)
       end)
    }
 
-   return wibox.widget({
+   -- Draws the client titlebar at the default position (top) and size.
+   awful.titlebar(c).widget = wibox.widget({
       layout = wibox.layout.align.horizontal,
       -- Left
       {

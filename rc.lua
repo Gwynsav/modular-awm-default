@@ -3,12 +3,6 @@
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, 'luarocks.loader')
 
--- Allow Awesome to automatically focus a client upon changing tags or loading.
-require('awful.autofocus')
--- Enable hotkeys help widget for VIM and other apps when client with a matching 
--- name is opened:
-require('awful.hotkeys_popup.keys')
-
 --- Error handling.
 -- Notification library.
 local naughty = require('naughty')
@@ -21,6 +15,12 @@ naughty.connect_signal('request::display_error', function(message, startup)
       message = message
    })
 end)
+
+-- Allow Awesome to automatically focus a client upon changing tags or loading.
+require('awful.autofocus')
+-- Enable hotkeys help widget for VIM and other apps when client with a matching 
+-- name is opened:
+require('awful.hotkeys_popup.keys')
 
 -- Load the theme. In other words, defines the variables within the `beautiful`
 -- table.
