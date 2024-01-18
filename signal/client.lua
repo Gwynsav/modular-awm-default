@@ -1,5 +1,3 @@
-local awful = require('awful')
-
 -- Add a titlebar if titlebars_enabled is set to true for the client in `config/rules.lua`.
 client.connect_signal('request::titlebars', function(c)
    -- While this isn't actually in the example configuration, it's the most sane thing to do.
