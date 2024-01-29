@@ -4,7 +4,7 @@ local beautiful = require('beautiful')
 --- Menu
 local menu = {}
 local apps = require('config.apps')
-local hkey_popup = awful.hotkeys_popup
+local hkey_popup = require('awful.hotkeys_popup')
 
 -- Create a main menu.
 menu.awesome = {
