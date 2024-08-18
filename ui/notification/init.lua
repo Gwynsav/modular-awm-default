@@ -1,5 +1,5 @@
--- Allows for expanding into notifications for special cases, for example, 
--- for music.
-return {
-   normal = require(... .. '.normal')
-}
+local naughty = require('naughty')
+
+return function(n)
+   return naughty.layout.box({ notification = n })
+end

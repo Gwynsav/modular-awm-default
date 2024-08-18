@@ -3,15 +3,14 @@ local awful = require('awful')
 local mod    = require('binds.mod')
 local modkey = mod.modkey
 
-local apps    = require('config.apps')
-local widgets = require('ui')
+local apps   = require('config.apps')
 
 --- Global key bindings
 awful.keyboard.append_global_keybindings({
    -- General Awesome keys.
    awful.key({ modkey,           }, 's', require('awful.hotkeys_popup').show_help,
       { description = 'show help', group = 'awesome' }),
-   awful.key({ modkey,           }, 'w', function() widgets.menu.main:show() end,
+   awful.key({ modkey,           }, 'w', function() require('ui.menu').main:show() end,
       { description = 'show main menu', group = 'awesome' }),
    awful.key({ modkey, mod.ctrl  }, 'r', awesome.restart,
       { description = 'reload awesome', group = 'awesome' }),

@@ -1,8 +1,9 @@
 -- Return a table containing all bar modules, with a name attached
 -- to each.
-return {
-   launcher  = require(... .. '.launcher'),
-   taglist   = require(... .. '.taglist'),
-   tasklist  = require(... .. '.tasklist'),
-   layoutbox = require(... .. '.layoutbox')
-}
+local path = ... .. '.'
+return setmetatable({}, {
+   __index = function(_, key)
+      local module, _ = require(path .. key)
+      return module
+   end
+})
