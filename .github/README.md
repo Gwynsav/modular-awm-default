@@ -19,6 +19,13 @@ you the further courtesy of sharing it. Think this is pointless? You're probably
 right.
 
 
+# Can I just use this instead of the default configuration then?
+If I haven't made mistakes (please report these if you find them), this configuration should
+work the same as the original default provided with AwesomeWM. Neither this project nor the
+default configuration are meant for actual use, and just serve as an example or baseline from
+which you can start working on your configuration.
+
+
 # Structure
 
 This project is divided into different directories that aim to provide cohesive configuration.
@@ -28,13 +35,14 @@ They're additionally split up into client (window) bindings and global (WM) bind
 tag number and names, and WM rules.
 - `module` is a dummy directory for you to put community developed modules into. Some common
 examples are [rubato](https://github.com/andOrlando/rubato) and 
-[bling](https://github.com/blingcorp/bling).
+[bling](https://github.com/blingcorp/bling). An extra README inside of the directory goes into
+more detail on how you can work with this.
 - `signal` contains the AwesomeWM signals that trigger events like tag creation and widget
 drawing. This one is easier to understand after you've used AWM for a while.
 - `theme` is mostly a dummy directory that currently only includes the `beautiful` initialization
 but is intended for you to expand with your own themes. An example of this idea can be found
-in one of my personal configurations, [gwileful](https://github.com/Gwynsav/gwileful/tree/widgets/theme).
-- `ui` contains all widgets and UI elements, providing a table with all of them for easy access.
+in one of my personal configurations, [gwileful](https://github.com/Gwynsav/gwileful/tree/theme).
+- `ui` contains all widgets and UI elements.
 - And finally, `rc.lua` just calls whatever needs to be called and handles errors.
 
 
@@ -56,5 +64,5 @@ AWM documentation](https://awesomewm.org/apidoc/documentation/10-building-and-te
 
 While we're on the topic of documentation, here's a link to the [official documentation
 for the master branch of Awesome](https://awesomewm.org/apidoc). Why the master branch?
-Because, as of the end of 2023, the stable release is about 4 years behind in development.
+Because, as of 2025, the stable release is about 6 years behind in development.
 I would recommend against using it as this project **doesn't work with it**.
